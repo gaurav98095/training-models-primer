@@ -45,3 +45,5 @@ data/
 .env
 .env.*
 !.env.example
+
+AGENTS.md
