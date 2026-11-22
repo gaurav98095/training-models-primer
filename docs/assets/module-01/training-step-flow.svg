@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420" role="img" aria-labelledby="title desc">
+  <title id="title">The five stages of one training step</title>
+  <desc id="desc">A forward pass produces logits, a loss compares logits with targets, backpropagation computes gradients, the optimizer updates parameters, and gradients are cleared.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#08152f"/><stop offset="1" stop-color="#111d42"/></linearGradient>
+    <linearGradient id="cyan" x1="0" x2="1"><stop stop-color="#21d4fd"/><stop offset="1" stop-color="#6c63ff"/></linearGradient>
+    <linearGradient id="amber" x1="0" x2="1"><stop stop-color="#ffcc70"/><stop offset="1" stop-color="#ff8a5b"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".3"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#8fdcff"/></marker>
+  </defs>
+  <rect width="1400" height="420" rx="28" fill="url(#bg)"/>
+  <text x="70" y="58" fill="#f3f7ff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">One training step, end to end</text>
+  <text x="70" y="90" fill="#9eb4d7" font-family="Inter,Arial,sans-serif" font-size="17">The loss is the signal; gradients explain how parameters should change.</text>
+  <g font-family="Inter,Arial,sans-serif" text-anchor="middle" filter="url(#shadow)">
+    <g transform="translate(70 145)"><rect width="210" height="150" rx="20" fill="#112951" stroke="#35d8ff" stroke-width="2"/><circle cx="42" cy="42" r="24" fill="#1d9fce"/><text x="42" y="50" fill="white" font-size="22" font-weight="700">1</text><text x="105" y="48" fill="#fff" font-size="21" font-weight="700">Forward</text><text x="105" y="84" fill="#b7c9e7" font-size="16">tokens → logits</text><text x="105" y="111" fill="#b7c9e7" font-size="15">model predicts</text></g>
+    <g transform="translate(330 145)"><rect width="210" height="150" rx="20" fill="#211f4d" stroke="#7d78ff" stroke-width="2"/><circle cx="42" cy="42" r="24" fill="#625be4"/><text x="42" y="50" fill="white" font-size="22" font-weight="700">2</text><text x="105" y="48" fill="#fff" font-size="21" font-weight="700">Loss</text><text x="105" y="84" fill="#c4c2f4" font-size="16">logits + targets</text><text x="105" y="111" fill="#c4c2f4" font-size="15">→ one scalar</text></g>
+    <g transform="translate(590 145)"><rect width="210" height="150" rx="20" fill="#30204b" stroke="#c27bff" stroke-width="2"/><circle cx="42" cy="42" r="24" fill="#a34dd5"/><text x="42" y="50" fill="white" font-size="22" font-weight="700">3</text><text x="105" y="48" fill="#fff" font-size="21" font-weight="700">Backward</text><text x="105" y="84" fill="#dfc7f5" font-size="16">loss.backward()</text><text x="105" y="111" fill="#dfc7f5" font-size="15">→ gradients</text></g>
+    <g transform="translate(850 145)"><rect width="210" height="150" rx="20" fill="#47302d" stroke="#ffbd70" stroke-width="2"/><circle cx="42" cy="42" r="24" fill="#d9864a"/><text x="42" y="50" fill="white" font-size="22" font-weight="700">4</text><text x="105" y="48" fill="#fff" font-size="21" font-weight="700">Update</text><text x="105" y="84" fill="#f7d6b4" font-size="16">optimizer.step()</text><text x="105" y="111" fill="#f7d6b4" font-size="15">→ new weights</text></g>
+    <g transform="translate(1110 145)"><rect width="210" height="150" rx="20" fill="#14394b" stroke="#6ee7c8" stroke-width="2"/><circle cx="42" cy="42" r="24" fill="#29ae91"/><text x="42" y="50" fill="white" font-size="22" font-weight="700">5</text><text x="105" y="48" fill="#fff" font-size="21" font-weight="700">Reset</text><text x="105" y="84" fill="#b9eadc" font-size="16">zero_grad()</text><text x="105" y="111" fill="#b9eadc" font-size="15">→ next batch</text></g>
+  </g>
+  <g stroke="#8fdcff" stroke-width="3" fill="none" marker-end="url(#arrow)"><path d="M280 220 H320"/><path d="M540 220 H580"/><path d="M800 220 H840"/><path d="M1060 220 H1100"/></g>
+  <path d="M1215 315 C1215 370 180 370 180 315" fill="none" stroke="#ffbd70" stroke-width="3" stroke-dasharray="9 8" marker-end="url(#arrow)"/>
+  <text x="700" y="397" fill="#ffcf91" font-family="Inter,Arial,sans-serif" font-size="16" text-anchor="middle">The updated parameters are used in the next forward pass.</text>
+</svg>

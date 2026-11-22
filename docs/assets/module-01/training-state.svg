@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="440" viewBox="0 0 1400 440" role="img" aria-labelledby="title desc">
+  <title id="title">Three kinds of training state</title>
+  <desc id="desc">Parameters are learned tensors, gradients are computed directions, and optimizer state stores extra buffers such as AdamW moments.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#09162f"/><stop offset="1" stop-color="#1a2045"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#9ce4ff"/></marker>
+  </defs>
+  <rect width="1400" height="440" rx="28" fill="url(#bg)"/>
+  <text x="70" y="58" fill="#f3f7ff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">Three kinds of state to inspect while training</text>
+  <text x="70" y="90" fill="#a8b9d9" font-family="Inter,Arial,sans-serif" font-size="17">A useful debugging question is: “Which state did this line change?”</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <g transform="translate(70 140)"><rect width="350" height="210" rx="22" fill="#123455" stroke="#42d8ff" stroke-width="2"/><circle cx="48" cy="52" r="25" fill="#209bc9"/><text x="48" y="60" fill="#fff" font-size="23" font-weight="700" text-anchor="middle">1</text><text x="90" y="58" fill="#fff" font-size="22" font-weight="700">Parameters</text><text x="32" y="105" fill="#c0eafa" font-family="ui-monospace,monospace" font-size="18">model.head.weight</text><text x="32" y="146" fill="#b2c9df" font-size="16">Learned tensors that define</text><text x="32" y="172" fill="#b2c9df" font-size="16">the model. Changed by</text><text x="32" y="198" fill="#ffcf91" font-family="ui-monospace,monospace" font-size="16">optimizer.step()</text></g>
+    <g transform="translate(525 140)"><rect width="350" height="210" rx="22" fill="#2b2151" stroke="#a67dff" stroke-width="2"/><circle cx="48" cy="52" r="25" fill="#7d52d2"/><text x="48" y="60" fill="#fff" font-size="23" font-weight="700" text-anchor="middle">2</text><text x="90" y="58" fill="#fff" font-size="22" font-weight="700">Gradients</text><text x="32" y="105" fill="#e0d5ff" font-family="ui-monospace,monospace" font-size="18">model.head.weight.grad</text><text x="32" y="146" fill="#cbbde7" font-size="16">Computed directions showing</text><text x="32" y="172" fill="#cbbde7" font-size="16">how loss changes. Created by</text><text x="32" y="198" fill="#ffcf91" font-family="ui-monospace,monospace" font-size="16">loss.backward()</text></g>
+    <g transform="translate(980 140)"><rect width="350" height="210" rx="22" fill="#4a302b" stroke="#ffbd70" stroke-width="2"/><circle cx="48" cy="52" r="25" fill="#d6804a"/><text x="48" y="60" fill="#fff" font-size="23" font-weight="700" text-anchor="middle">3</text><text x="90" y="58" fill="#fff" font-size="22" font-weight="700">Optimizer state</text><text x="32" y="105" fill="#ffe4c9" font-family="ui-monospace,monospace" font-size="18">AdamW moments</text><text x="32" y="146" fill="#e6c9b5" font-size="16">Extra buffers such as moving</text><text x="32" y="172" fill="#e6c9b5" font-size="16">averages. Updated by</text><text x="32" y="198" fill="#ffcf91" font-family="ui-monospace,monospace" font-size="16">optimizer.step()</text></g>
+  </g>
+  <path d="M430 245 H510 M885 245 H965" stroke="#9ce4ff" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>
