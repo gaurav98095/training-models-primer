@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="410" viewBox="0 0 1400 410" role="img" aria-labelledby="title desc">
+  <title id="title">Gradient magnitude changes the size of an SGD update</title>
+  <desc id="desc">Three parameters with gradients 0.001, 1, and 1000 receive SGD updates of negative 0.00001, negative 0.01, and negative 10 at learning rate 0.01.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#1b2430"/><stop offset="1" stop-color="#202b38"/></linearGradient><linearGradient id="bar1" x1="0" x2="1"><stop stop-color="#628f96"/><stop offset="1" stop-color="#8790a0"/></linearGradient><linearGradient id="bar2" x1="0" x2="1"><stop stop-color="#8b819c"/><stop offset="1" stop-color="#8b819c"/></linearGradient><linearGradient id="bar3" x1="0" x2="1"><stop stop-color="#b59a69"/><stop offset="1" stop-color="#a9876d"/></linearGradient></defs>
+  <rect width="1400" height="410" rx="28" fill="url(#bg)"/>
+  <text x="70" y="58" fill="#e4e7e8" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">Gradient magnitude controls the raw SGD step</text>
+  <text x="70" y="90" fill="#aeb8bc" font-family="Inter,Arial,sans-serif" font-size="17">Same learning rate: η = 0.01. The bars show absolute weight-change magnitude.</text>
+  <g transform="translate(100 135)" font-family="Inter,Arial,sans-serif">
+    <line x1="0" y1="205" x2="850" y2="205" stroke="#65737d" stroke-width="2"/>
+    <g><rect x="70" y="202" width="180" height="3" rx="2" fill="url(#bar1)"/><text x="160" y="250" fill="#e4e7e8" font-size="19" text-anchor="middle">g = 0.001</text><text x="160" y="278" fill="#b8c5c9" font-family="ui-monospace,monospace" font-size="17" text-anchor="middle">Δw = −0.00001</text></g>
+    <g><rect x="335" y="180" width="180" height="25" rx="8" fill="url(#bar2)"/><text x="425" y="250" fill="#e4e7e8" font-size="19" text-anchor="middle">g = 1</text><text x="425" y="278" fill="#cfc3d0" font-family="ui-monospace,monospace" font-size="17" text-anchor="middle">Δw = −0.01</text></g>
+    <g><rect x="600" y="35" width="180" height="170" rx="12" fill="url(#bar3)"/><text x="690" y="250" fill="#e4e7e8" font-size="19" text-anchor="middle">g = 1000</text><text x="690" y="278" fill="#c2ab91" font-family="ui-monospace,monospace" font-size="17" text-anchor="middle">Δw = −10</text></g>
+    <text x="425" y="330" fill="#b0bcc0" font-size="16" text-anchor="middle">A large gradient is a reason to inspect the update—not automatic proof of failure.</text>
+  </g>
+  <g transform="translate(1020 145)" font-family="Inter,Arial,sans-serif"><rect width="300" height="135" rx="20" fill="#2a3741" stroke="#53636e" stroke-width="2"/><text x="28" y="44" fill="#e4e7e8" font-size="20" font-weight="700">Measure together</text><text x="28" y="80" fill="#b8c5c9" font-size="17">gradient norm</text><text x="168" y="80" fill="#cfc3d0" font-size="17">weight norm</text><text x="28" y="108" fill="#c2ab91" font-size="17">update norm</text><text x="168" y="108" fill="#a6c3bc" font-size="17">loss + LR</text></g>
+</svg>

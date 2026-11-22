@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="430" viewBox="0 0 1400 430" role="img" aria-labelledby="title desc">
+  <title id="title">A gradient is the local slope of the loss</title>
+  <desc id="desc">The quadratic loss L equals w minus 5 squared. At weight 2 the gradient is negative 6, at weight 5 it is zero, and at weight 8 it is positive 6.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#1b2430"/><stop offset="1" stop-color="#202b38"/></linearGradient>
+    <linearGradient id="curve" x1="0" x2="1"><stop stop-color="#789b93"/><stop offset="1" stop-color="#8b819c"/></linearGradient>
+  </defs>
+  <rect width="1400" height="430" rx="28" fill="url(#bg)"/>
+  <text x="70" y="58" fill="#e4e7e8" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">The gradient is a local slope</text>
+  <text x="70" y="89" fill="#aeb8bc" font-family="Inter,Arial,sans-serif" font-size="17">For L = (w − 5)², the gradient tells us which direction reduces loss nearby.</text>
+  <g transform="translate(100 125)">
+    <path d="M0 245 H760 M60 270 V15" fill="none" stroke="#65737d" stroke-width="2"/>
+    <path d="M80 38 C205 92 300 204 425 230 C550 204 645 92 740 38" fill="none" stroke="url(#curve)" stroke-width="5"/>
+    <line x1="220" y1="155" x2="220" y2="245" stroke="#ff9d68" stroke-width="2" stroke-dasharray="5 5"/><circle cx="220" cy="155" r="10" fill="#ff9d68" stroke="#e4e7e8" stroke-width="3"/>
+    <line x1="425" y1="230" x2="425" y2="245" stroke="#7fa7a0" stroke-width="2" stroke-dasharray="5 5"/><circle cx="425" cy="230" r="10" fill="#7fa7a0" stroke="#e4e7e8" stroke-width="3"/>
+    <line x1="630" y1="155" x2="630" y2="245" stroke="#8b819c" stroke-width="2" stroke-dasharray="5 5"/><circle cx="630" cy="155" r="10" fill="#8b819c" stroke="#e4e7e8" stroke-width="3"/>
+    <text x="220" y="294" fill="#c2ab91" font-family="ui-monospace,monospace" font-size="18" text-anchor="middle">w = 2</text><text x="220" y="320" fill="#c2ab91" font-family="ui-monospace,monospace" font-size="17" text-anchor="middle">gradient = −6</text>
+    <text x="425" y="294" fill="#a6c3bc" font-family="ui-monospace,monospace" font-size="18" text-anchor="middle">w = 5</text><text x="425" y="320" fill="#a6c3bc" font-family="ui-monospace,monospace" font-size="17" text-anchor="middle">gradient = 0</text>
+    <text x="630" y="294" fill="#cfc3d0" font-family="ui-monospace,monospace" font-size="18" text-anchor="middle">w = 8</text><text x="630" y="320" fill="#cfc3d0" font-family="ui-monospace,monospace" font-size="17" text-anchor="middle">gradient = +6</text>
+    <text x="20" y="25" fill="#aeb8bc" font-family="Inter,Arial,sans-serif" font-size="15">loss</text><text x="745" y="275" fill="#aeb8bc" font-family="Inter,Arial,sans-serif" font-size="15">weight</text>
+  </g>
+  <g transform="translate(960 145)" font-family="Inter,Arial,sans-serif"><rect width="350" height="175" rx="20" fill="#2a3741" stroke="#53636e" stroke-width="2"/><text x="30" y="44" fill="#e4e7e8" font-size="20" font-weight="700">SGD moves against g</text><text x="30" y="91" fill="#c2c8cb" font-family="ui-monospace,monospace" font-size="20">w_new = w − ηg</text><text x="30" y="133" fill="#b59a69" font-size="17">negative g → increase w</text><text x="30" y="159" fill="#a6c3bc" font-size="17">positive g → decrease w</text></g>
+</svg>

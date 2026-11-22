@@ -2,33 +2,33 @@
   <title id="title">A gradient update moves a weight toward a lower loss</title>
   <desc id="desc">The current weight is 3, its gradient is negative 16, and an SGD step with learning rate 0.1 moves it to 4.6, closer to the minimum at weight 5.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#0a1730"/><stop offset="1" stop-color="#171e42"/></linearGradient>
-    <linearGradient id="curve" x1="0" x2="1"><stop stop-color="#46d7ff"/><stop offset="1" stop-color="#9f78ff"/></linearGradient>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#ffc978"/></marker>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#1c2632"/><stop offset="1" stop-color="#202b38"/></linearGradient>
+    <linearGradient id="curve" x1="0" x2="1"><stop stop-color="#789b93"/><stop offset="1" stop-color="#8b819c"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#b59a69"/></marker>
   </defs>
   <rect width="1400" height="430" rx="28" fill="url(#bg)"/>
-  <text x="70" y="58" fill="#f3f7ff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">One gradient step on a simple loss curve</text>
-  <text x="70" y="89" fill="#a9b9d8" font-family="Inter,Arial,sans-serif" font-size="17">For L = (2w − 10)², the minimum occurs at w = 5.</text>
+  <text x="70" y="58" fill="#e4e7e8" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">One gradient step on a simple loss curve</text>
+  <text x="70" y="89" fill="#aeb8bc" font-family="Inter,Arial,sans-serif" font-size="17">For L = (2w − 10)², the minimum occurs at w = 5.</text>
   <g transform="translate(90 115)">
-    <path d="M0 230 H670 M45 260 V20" fill="none" stroke="#7086aa" stroke-width="2"/>
+    <path d="M0 230 H670 M45 260 V20" fill="none" stroke="#65737d" stroke-width="2"/>
     <path d="M50 40 C145 70 220 160 330 220 C430 275 520 260 650 35" fill="none" stroke="url(#curve)" stroke-width="5"/>
-    <path d="M285 220 L330 232" fill="none" stroke="#ffc978" stroke-width="4" marker-end="url(#arrow)"/>
-    <circle cx="285" cy="220" r="10" fill="#ff9e68" stroke="#fff" stroke-width="3"/>
-    <circle cx="330" cy="232" r="10" fill="#5ee8cb" stroke="#fff" stroke-width="3"/>
-    <line x1="330" y1="232" x2="330" y2="260" stroke="#5ee8cb" stroke-width="2" stroke-dasharray="5 5"/>
-    <line x1="285" y1="220" x2="285" y2="260" stroke="#ff9e68" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M285 220 L330 232" fill="none" stroke="#b59a69" stroke-width="4" marker-end="url(#arrow)"/>
+    <circle cx="285" cy="220" r="10" fill="#a9876d" stroke="#e4e7e8" stroke-width="3"/>
+    <circle cx="330" cy="232" r="10" fill="#7fa7a0" stroke="#e4e7e8" stroke-width="3"/>
+    <line x1="330" y1="232" x2="330" y2="260" stroke="#7fa7a0" stroke-width="2" stroke-dasharray="5 5"/>
+    <line x1="285" y1="220" x2="285" y2="260" stroke="#a9876d" stroke-width="2" stroke-dasharray="5 5"/>
     <text x="285" y="292" fill="#ffc7a4" font-family="ui-monospace,monospace" font-size="18" text-anchor="middle">w = 3</text>
     <text x="330" y="322" fill="#b6f5e8" font-family="ui-monospace,monospace" font-size="18" text-anchor="middle">w = 4.6</text>
-    <text x="405" y="292" fill="#d9cfff" font-family="ui-monospace,monospace" font-size="18" text-anchor="middle">w = 5</text>
-    <text x="-5" y="25" fill="#a9b9d8" font-family="Inter,Arial,sans-serif" font-size="15">loss</text>
-    <text x="655" y="286" fill="#a9b9d8" font-family="Inter,Arial,sans-serif" font-size="15">weight</text>
+    <text x="405" y="292" fill="#cfc3d0" font-family="ui-monospace,monospace" font-size="18" text-anchor="middle">w = 5</text>
+    <text x="-5" y="25" fill="#aeb8bc" font-family="Inter,Arial,sans-serif" font-size="15">loss</text>
+    <text x="655" y="286" fill="#aeb8bc" font-family="Inter,Arial,sans-serif" font-size="15">weight</text>
   </g>
   <g transform="translate(850 130)" font-family="Inter,Arial,sans-serif">
-    <rect width="470" height="220" rx="22" fill="#132852" stroke="#496ca4" stroke-width="2"/>
-    <text x="34" y="45" fill="#fff" font-size="20" font-weight="700">The update calculation</text>
-    <text x="34" y="92" fill="#c4d5f2" font-family="ui-monospace,monospace" font-size="20">w_new = w_old − η × gradient</text>
-    <text x="34" y="135" fill="#ffc978" font-family="ui-monospace,monospace" font-size="20">4.6 = 3 − 0.1 × (−16)</text>
-    <text x="34" y="181" fill="#b8eadf" font-size="17">The negative gradient points toward</text>
-    <text x="34" y="207" fill="#b8eadf" font-size="17">a larger weight and lower loss.</text>
+    <rect width="470" height="220" rx="22" fill="#2a3741" stroke="#53636e" stroke-width="2"/>
+    <text x="34" y="45" fill="#e4e7e8" font-size="20" font-weight="700">The update calculation</text>
+    <text x="34" y="92" fill="#c2c8cb" font-family="ui-monospace,monospace" font-size="20">w_new = w_old − η × gradient</text>
+    <text x="34" y="135" fill="#b59a69" font-family="ui-monospace,monospace" font-size="20">4.6 = 3 − 0.1 × (−16)</text>
+    <text x="34" y="181" fill="#a6c3bc" font-size="17">The negative gradient points toward</text>
+    <text x="34" y="207" fill="#a6c3bc" font-size="17">a larger weight and lower loss.</text>
   </g>
 </svg>
