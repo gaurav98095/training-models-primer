@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">Xavier and Kaiming initialization comparison</title>
+  <desc id="desc">Xavier initialization balances input and output fan variance, while Kaiming initialization preserves forward variance for ReLU-like nonlinearities by accounting for inactive units.</desc>
+  <rect width="920" height="420" fill="#17212b"/><g font-family="system-ui, sans-serif" fill="#e6e3dc">
+  <text x="42" y="47" font-size="24" font-weight="700">Initialization comparison</text><text x="42" y="74" font-size="15" fill="#aeb8bd">Choose the scale to match the layer and nonlinearity</text>
+  <rect x="42" y="112" width="400" height="250" rx="12" fill="#202d38" stroke="#53636a"/><rect x="478" y="112" width="400" height="250" rx="12" fill="#202d38" stroke="#53636a"/>
+  <text x="68" y="150" font-size="20" font-weight="700" fill="#b8a6c9">Xavier / Glorot</text><text x="504" y="150" font-size="20" font-weight="700" fill="#6fa6a0">Kaiming / He</text>
+  <g font-size="16"><text x="68" y="195">Balances fan-in and fan-out</text><text x="68" y="225" fill="#aeb8bd">Var(W) ≈ 2 / (fan-in + fan-out)</text><text x="68" y="280" fill="#d2a86a">Useful for tanh or sigmoid</text><text x="504" y="195">Preserves forward variance</text><text x="504" y="225" fill="#aeb8bd">Var(W) ≈ 2 / fan-in</text><text x="504" y="280" fill="#d2a86a">Designed for ReLU-like layers</text></g>
+  <path d="M120 325h235M555 325h235" stroke="#829096" stroke-width="3"/><circle cx="238" cy="325" r="10" fill="#b8a6c9"/><circle cx="672" cy="325" r="10" fill="#6fa6a0"/><text x="68" y="345" font-size="13" fill="#aeb8bd">input ↔ output</text><text x="504" y="345" font-size="13" fill="#aeb8bd">input → active ReLU output</text>
+  </g>
+</svg>

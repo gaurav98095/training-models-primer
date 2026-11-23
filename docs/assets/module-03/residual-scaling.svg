@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">Residual branch scaling</title>
+  <desc id="desc">An unscaled residual addition combines two branches and increases variance, while scaling the residual branch before addition keeps the combined variance controlled.</desc>
+  <rect width="920" height="420" fill="#17212b"/><g font-family="system-ui, sans-serif" fill="#e6e3dc">
+  <text x="42" y="47" font-size="24" font-weight="700">Residual scaling</text><text x="42" y="74" font-size="15" fill="#aeb8bd">Adding independent branches can increase variance</text>
+  <g stroke="#829096" stroke-width="3" fill="none"><path d="M90 170h125M90 275h125M315 170h95M315 275h95M510 220h100M720 220h100"/></g>
+  <g fill="#d2a86a" stroke="#e6e3dc" stroke-width="2"><circle cx="90" cy="170" r="18"/><circle cx="90" cy="275" r="18"/><rect x="215" y="140" width="100" height="60" rx="8"/><rect x="215" y="245" width="100" height="60" rx="8"/><rect x="410" y="190" width="100" height="60" rx="8"/><rect x="610" y="190" width="110" height="60" rx="8"/></g>
+  <g font-size="15" text-anchor="middle"><text x="90" y="335">x</text><text x="90" y="145">F(x)</text><text x="265" y="175">residual</text><text x="265" y="280">residual × α</text><text x="460" y="225">add</text><text x="665" y="225">add</text><text x="815" y="214" fill="#d2a86a">larger</text><text x="815" y="238" fill="#6fa6a0">controlled</text></g>
+  <text x="65" y="385" font-size="14" fill="#d2a86a">unscaled: Var(x + F(x)) grows</text><text x="500" y="385" font-size="14" fill="#6fa6a0">scaled: α keeps the residual contribution bounded</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-labelledby="title desc">
+  <title id="title">Symmetry breaking with randomized initialization</title>
+  <desc id="desc">Two identical neurons with identical weights receive the same input and produce identical outputs. Randomized weights make the two neurons produce different outputs and learn different features.</desc>
+  <rect width="920" height="430" fill="#17212b"/>
+  <g font-family="system-ui, sans-serif" fill="#e6e3dc">
+    <text x="42" y="48" font-size="24" font-weight="700">Symmetry breaking</text>
+    <text x="42" y="76" font-size="15" fill="#aeb8bd">Same inputs + same weights = same updates</text>
+    <rect x="35" y="108" width="410" height="270" rx="12" fill="#202d38" stroke="#53636a"/>
+    <rect x="475" y="108" width="410" height="270" rx="12" fill="#202d38" stroke="#53636a"/>
+    <text x="58" y="140" font-size="18" font-weight="700">Identical initialization</text>
+    <text x="498" y="140" font-size="18" font-weight="700">Randomized initialization</text>
+    <g stroke="#829096" stroke-width="2" fill="none">
+      <path d="M110 210H205M110 275H205M330 210H380M330 275H380"/>
+      <path d="M550 210H645M550 275H645M770 210H820M770 275H820"/>
+    </g>
+    <g fill="#b8a6c9" stroke="#e6e3dc" stroke-width="2">
+      <circle cx="95" cy="210" r="16"/><circle cx="95" cy="275" r="16"/>
+      <circle cx="235" cy="210" r="28"/><circle cx="235" cy="275" r="28"/>
+      <circle cx="675" cy="210" r="28"/><circle cx="675" cy="275" r="28"/>
+    </g>
+    <g fill="#d2a86a" stroke="#e6e3dc" stroke-width="2"><circle cx="95" cy="210" r="16"/><circle cx="95" cy="275" r="16"/><circle cx="550" cy="210" r="16"/><circle cx="550" cy="275" r="16"/></g>
+    <g font-size="14" text-anchor="middle"><text x="95" y="325">same x</text><text x="235" y="210">w</text><text x="235" y="275">w</text><text x="335" y="216" fill="#d2a86a">same y</text><text x="675" y="210">w₁</text><text x="675" y="275">w₂</text><text x="835" y="216" fill="#6fa6a0">different y</text></g>
+    <path d="M290 210h55M290 275h55" stroke="#d2a86a" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M730 210h55M730 275h55" stroke="#6fa6a0" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="58" y="357" font-size="14" fill="#d2a86a">one repeated feature</text><text x="498" y="357" font-size="14" fill="#6fa6a0">distinct feature directions</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="currentColor"/></marker></defs>
+</svg>
