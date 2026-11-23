@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Global gradient norm across tensors</title>
+  <desc id="desc">Gradient tensors from several layers contribute squared values to one global norm before clipping.</desc>
+  <rect width="900" height="520" fill="#17212b"/><g font-family="Inter,Arial,sans-serif" fill="#e7edf2">
+    <text x="48" y="54" font-size="26" font-weight="700">One global norm</text><text x="48" y="82" fill="#aab8c4" font-size="16">Combine all parameter gradients before deciding whether to clip.</text>
+    <g stroke="#526473" fill="#243442" stroke-width="2"><rect x="52" y="140" width="190" height="78" rx="10"/><rect x="52" y="252" width="190" height="78" rx="10"/><rect x="52" y="364" width="190" height="78" rx="10"/></g>
+    <g font-size="18"><text x="78" y="174">Embedding gradient</text><text x="78" y="198" fill="#d3a85c">‖g₁‖² = 1.4</text><text x="78" y="286">Layer 1 gradient</text><text x="78" y="310" fill="#8fc3b5">‖g₂‖² = 2.1</text><text x="78" y="398">Layer 2 gradient</text><text x="78" y="422" fill="#b5a6cf">‖g₃‖² = 0.9</text></g>
+    <g stroke="#8fc3b5" stroke-width="3" fill="none"><path d="M242 179H330M242 291H330M242 403H330M330 179V403M330 291H390"/></g><path d="M378 282l12 9-12 9" fill="#8fc3b5"/>
+    <rect x="390" y="240" width="220" height="102" rx="12" fill="#2a3947" stroke="#8fc3b5" stroke-width="2"/><text x="420" y="276" font-size="19">Sum squares</text><text x="420" y="309" font-size="18" fill="#8fc3b5">1.4 + 2.1 + 0.9</text><text x="420" y="333" font-size="16" fill="#aab8c4">= 4.4</text>
+    <path d="M610 291H700" stroke="#8fc3b5" stroke-width="3"/><path d="M688 282l12 9-12 9" fill="#8fc3b5"/><rect x="700" y="240" width="150" height="102" rx="12" fill="#3a3030" stroke="#b97866" stroke-width="2"/><text x="720" y="276" font-size="18">Global norm</text><text x="720" y="310" font-size="22" fill="#d3a85c">√4.4 = 2.10</text><text x="720" y="334" font-size="14" fill="#aab8c4">compare with τ</text>
+  </g>
+</svg>
