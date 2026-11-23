@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Clipping reduces the gradient-driven update size</title>
+  <desc id="desc">With learning rate 0.01, an unclipped gradient norm of 1000 produces an update norm of 10, while clipping the gradient norm to 1 produces an update norm of 0.01.</desc>
+  <rect width="1200" height="360" rx="24" fill="#18222e"/>
+  <text x="60" y="55" fill="#edf0ee" font-family="Inter,Arial,sans-serif" font-size="26" font-weight="700">Clipping bounds the gradient-driven step</text>
+  <text x="60" y="86" fill="#b9c2c5" font-family="Inter,Arial,sans-serif" font-size="16">Same learning rate: η = 0.01</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="70" y="130" width="460" height="150" rx="18" fill="#303943" stroke="#a9876d" stroke-width="2"/>
+    <text x="105" y="172" fill="#edf0ee" font-size="20" font-weight="700">Without clipping</text>
+    <text x="105" y="218" fill="#d7b07a" font-family="ui-monospace,monospace" font-size="20">‖g‖ = 1000</text>
+    <text x="105" y="252" fill="#d7b07a" font-family="ui-monospace,monospace" font-size="20">‖Δw‖ = 0.01 × 1000 = 10</text>
+    <rect x="650" y="130" width="460" height="150" rx="18" fill="#293b3a" stroke="#78aaa0" stroke-width="2"/>
+    <text x="685" y="172" fill="#edf0ee" font-size="20" font-weight="700">With clipping</text>
+    <text x="685" y="218" fill="#a8d0c7" font-family="ui-monospace,monospace" font-size="20">‖g‖ = 1</text>
+    <text x="685" y="252" fill="#a8d0c7" font-family="ui-monospace,monospace" font-size="20">‖Δw‖ = 0.01 × 1 = 0.01</text>
+  </g>
+  <path d="M545 205 H635" stroke="#b9c2c5" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#b9c2c5"/></marker></defs>
+</svg>
