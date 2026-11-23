@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" role="img" aria-labelledby="title desc">
+  <title id="title">Variance through a linear layer</title>
+  <desc id="desc">Three weight standard deviations, 0.01, 0.1, and 1.0, lead to increasingly small, moderate, and large output scales in a linear layer.</desc>
+  <rect width="920" height="470" fill="#17212b"/><g font-family="system-ui, sans-serif" fill="#e6e3dc">
+  <text x="42" y="45" font-size="24" font-weight="700">Variance through a layer</text><text x="42" y="72" font-size="15" fill="#aeb8bd">Weight scale controls the scale of activations</text>
+  <line x1="115" y1="370" x2="850" y2="370" stroke="#53636a"/><line x1="115" y1="115" x2="115" y2="370" stroke="#53636a"/>
+  <g font-size="14" fill="#aeb8bd"><text x="70" y="375">0</text><text x="49" y="250">output</text><text x="49" y="266">scale</text><text x="190" y="402">std 0.01</text><text x="430" y="402">std 0.1</text><text x="670" y="402">std 1.0</text></g>
+  <g fill="#6fa6a0"><rect x="185" y="352" width="100" height="18"/><rect x="425" y="290" width="100" height="80"/><rect x="665" y="145" width="100" height="225"/></g>
+  <g fill="#d2a86a" font-size="16" text-anchor="middle"><text x="235" y="337">tiny</text><text x="475" y="275">moderate</text><text x="715" y="130">large</text></g>
+  <path d="M335 195h50M575 195h50" stroke="#829096" stroke-width="2" marker-end="url(#arrow)"/><text x="370" y="180" font-size="13" fill="#aeb8bd">increasing |Wx|</text>
+  </g><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#829096"/></marker></defs>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 350" role="img" aria-labelledby="title desc">
+  <title id="title">Linear layer tensor shapes and parameter count</title>
+  <desc id="desc">A linear layer maps an input tensor of shape 8 by 128 through a weight matrix of shape 256 by 128 to an output tensor of shape 8 by 256, using 32,768 weight parameters.</desc>
+  <rect width="920" height="350" fill="#17212b"/><g font-family="system-ui, sans-serif" fill="#e6e3dc">
+  <text x="42" y="47" font-size="24" font-weight="700">Linear layer shapes</text><text x="42" y="74" font-size="15" fill="#aeb8bd">Track batch, input, and output dimensions through the matrix multiply</text>
+  <g fill="#202d38" stroke="#53636a" stroke-width="2"><rect x="60" y="130" width="180" height="100" rx="10"/><rect x="370" y="130" width="180" height="100" rx="10"/><rect x="680" y="130" width="180" height="100" rx="10"/></g>
+  <g font-size="20" text-anchor="middle"><text x="150" y="170">X</text><text x="150" y="205" fill="#d2a86a">[8, 128]</text><text x="460" y="170">W</text><text x="460" y="205" fill="#b8a6c9">[256, 128]</text><text x="770" y="170">Y</text><text x="770" y="205" fill="#6fa6a0">[8, 256]</text></g>
+  <g stroke="#829096" stroke-width="3"><path d="M240 180h125" marker-end="url(#arrow)"/><path d="M550 180h125" marker-end="url(#arrow)"/></g>
+  <text x="42" y="285" font-size="18" fill="#d2a86a">Parameters: 256 × 128 = 32,768 weights</text><text x="42" y="315" font-size="14" fill="#aeb8bd">The batch dimension 8 is carried through; the feature dimension changes from 128 to 256.</text>
+  </g><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#829096"/></marker></defs>
+</svg>

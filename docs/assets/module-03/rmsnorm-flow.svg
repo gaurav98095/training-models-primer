@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" role="img" aria-labelledby="title desc">
+  <title id="title">RMSNorm flow</title>
+  <desc id="desc">An input vector is squared and averaged, stabilized with epsilon, divided by its root mean square, and optionally rescaled by a learned gain.</desc>
+  <rect width="920" height="360" fill="#17212b"/><g font-family="system-ui, sans-serif" fill="#e6e3dc">
+  <text x="42" y="47" font-size="24" font-weight="700">RMSNorm flow</text><text x="42" y="74" font-size="15" fill="#aeb8bd">Normalize magnitude without subtracting the mean</text>
+  <g fill="#202d38" stroke="#53636a" stroke-width="2"><rect x="42" y="135" width="135" height="90" rx="10"/><rect x="215" y="135" width="135" height="90" rx="10"/><rect x="388" y="135" width="135" height="90" rx="10"/><rect x="561" y="135" width="135" height="90" rx="10"/><rect x="734" y="135" width="140" height="90" rx="10"/></g>
+  <g font-size="16" text-anchor="middle"><text x="110" y="170">x</text><text x="110" y="195" fill="#d2a86a">input vector</text><text x="282" y="170">x²</text><text x="282" y="195" fill="#aeb8bd">square</text><text x="455" y="170">mean + ε</text><text x="455" y="195" fill="#aeb8bd">stabilize</text><text x="628" y="170">x / RMS</text><text x="628" y="195" fill="#6fa6a0">normalize</text><text x="804" y="170">g · result</text><text x="804" y="195" fill="#b8a6c9">learned gain</text></g>
+  <g stroke="#829096" stroke-width="3"><path d="M177 180h38M350 180h38M523 180h38M696 180h38" marker-end="url(#arrow)"/></g>
+  <text x="42" y="290" font-size="16" fill="#aeb8bd">RMS(x) = √(mean(x²) + ε)</text><text x="42" y="320" font-size="14" fill="#d2a86a">The direction is preserved; the overall magnitude is controlled.</text>
+  </g><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#829096"/></marker></defs>
+</svg>
