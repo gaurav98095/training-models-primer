@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+ <title id="title">Optimizer paths across a two-dimensional loss surface</title><desc id="desc">Four labeled paths compare SGD, momentum, Adam, and AdamW as they approach a minimum. The paths are schematic and emphasize different update directions.</desc>
+ <rect width="900" height="500" fill="#17212b"/><g fill="none" stroke="#425463" stroke-width="2"><ellipse cx="465" cy="275" rx="300" ry="150"/><ellipse cx="465" cy="275" rx="215" ry="105"/><ellipse cx="465" cy="275" rx="125" ry="62"/></g>
+ <circle cx="465" cy="275" r="8" fill="#d4a75c"/><text x="480" y="280" fill="#e7edf0" font-family="sans-serif" font-size="16">minimum</text>
+ <g fill="none" stroke-linecap="round" stroke-width="5"><path d="M95 90 C190 125 250 205 330 250 S425 275 455 275" stroke="#80b8b0"/><path d="M95 415 C205 360 175 265 300 250 S410 270 455 275" stroke="#b4a6d8"/><path d="M95 125 C220 160 260 230 345 260 S430 275 455 275" stroke="#d4a75c"/><path d="M95 370 C205 330 235 295 330 280 S425 275 455 275" stroke="#bd7562"/></g>
+ <g font-family="sans-serif" font-size="17" fill="#e7edf0"><text x="70" y="82">SGD</text><text x="65" y="438">momentum</text><text x="190" y="145">Adam</text><text x="185" y="365">AdamW</text></g><text x="55" y="475" fill="#9eabb5" font-family="sans-serif" font-size="14">schematic trajectories: gradient direction, history, adaptive scaling, and decay</text>
+</svg>
