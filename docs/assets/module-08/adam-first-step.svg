@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">Why Adam plus L2 and AdamW can agree on one first step</title>
+  <desc id="desc">For a positive scalar weight of 10 and zero task gradient, both methods produce 9.9 on the first step, but for a weight of 100 their paths differ because Adam normalizes the L2 gradient while AdamW scales the parameter directly.</desc>
+  <rect width="960" height="430" fill="#17212b"/>
+  <g font-family="sans-serif">
+    <text x="52" y="48" fill="#e7edf0" font-size="25" font-weight="700">A matching first step can be misleading</text>
+    <text x="52" y="76" fill="#9eabb5" font-size="16">Same hyperparameters: η = 0.1, λ = 0.1, zero task gradient, empty Adam state.</text>
+    <line x1="480" y1="104" x2="480" y2="360" stroke="#536371" stroke-width="2"/>
+    <text x="240" y="126" text-anchor="middle" fill="#b4a6d8" font-size="21" font-weight="700">Adam + L2</text>
+    <text x="720" y="126" text-anchor="middle" fill="#d4a75c" font-size="21" font-weight="700">AdamW</text>
+    <g fill="#263541" stroke-width="2">
+      <rect x="70" y="152" width="340" height="64" rx="9" stroke="#b4a6d8"/>
+      <rect x="550" y="152" width="340" height="64" rx="9" stroke="#d4a75c"/>
+      <rect x="70" y="242" width="340" height="64" rx="9" stroke="#b4a6d8"/>
+      <rect x="550" y="242" width="340" height="64" rx="9" stroke="#d4a75c"/>
+    </g>
+    <g text-anchor="middle" fill="#e7edf0" font-size="17">
+      <text x="240" y="180">g = λθ = 1 for θ = 10</text><text x="240" y="202" fill="#9eabb5">normalized step ≈ 0.1 → 9.9</text>
+      <text x="720" y="180">direct shrinkage = 0.1 × 0.1 × 10</text><text x="720" y="202" fill="#9eabb5">decay step = 0.1 → 9.9</text>
+      <text x="240" y="270">g = λθ = 10 for θ = 100</text><text x="240" y="292" fill="#9eabb5">normalized step ≈ 0.1 → 99.9</text>
+      <text x="720" y="270">direct shrinkage = 0.1 × 0.1 × 100</text><text x="720" y="292" fill="#9eabb5">decay step = 1.0 → 99.0</text>
+    </g>
+    <rect x="70" y="342" width="820" height="48" rx="9" fill="#1d2a34"/>
+    <text x="480" y="372" text-anchor="middle" fill="#e7edf0" font-size="16">Adam's adaptive normalization hides scale; AdamW's decay remains proportional to θ.</text>
+  </g>
+</svg>
