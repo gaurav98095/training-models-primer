@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Training observability metrics</title><desc id="desc">Six aligned metric panels show loss, gradient norm, weight norm, update norm, learning rate, and memory over training steps.</desc>
+  <rect width="1200" height="650" fill="#17212b"/><text x="48" y="48" fill="#e7e1d7" font-family="sans-serif" font-size="24" font-weight="700">One step, six signals</text><text x="48" y="76" fill="#a8b3bd" font-family="sans-serif" font-size="14">Track absolute values and trends together; a single curve rarely explains a failure.</text>
+  <g font-family="sans-serif" font-size="13" fill="#dce2e5" stroke="#536370" stroke-width="1">
+    <g transform="translate(48 110)"><rect width="340" height="210" rx="8" fill="#202d38"/><text x="18" y="27" stroke="none" fill="#dce2e5">Loss</text><path d="M18 170H320M18 40V170" fill="none"/><path d="M20 62 C85 75 110 120 160 125 S250 150 320 162" fill="none" stroke="#7da9a1" stroke-width="4"/></g>
+    <g transform="translate(430 110)"><rect width="340" height="210" rx="8" fill="#202d38"/><text x="18" y="27" stroke="none">Gradient norm</text><path d="M18 170H320M18 40V170" fill="none"/><path d="M20 140 L90 130 145 145 205 72 245 122 320 115" fill="none" stroke="#b89fc8" stroke-width="4"/></g>
+    <g transform="translate(812 110)"><rect width="340" height="210" rx="8" fill="#202d38"/><text x="18" y="27" stroke="none">Weight norm</text><path d="M18 170H320M18 40V170" fill="none"/><path d="M20 125 L90 120 150 115 220 112 320 110" fill="none" stroke="#c8a66a" stroke-width="4"/></g>
+    <g transform="translate(48 370)"><rect width="340" height="210" rx="8" fill="#202d38"/><text x="18" y="27" stroke="none">Update norm</text><path d="M18 170H320M18 40V170" fill="none"/><path d="M20 145 L90 142 150 138 205 80 245 130 320 135" fill="none" stroke="#b66f62" stroke-width="4"/></g>
+    <g transform="translate(430 370)"><rect width="340" height="210" rx="8" fill="#202d38"/><text x="18" y="27" stroke="none">Learning rate</text><path d="M18 170H320M18 40V170" fill="none"/><path d="M20 70 L100 75 180 90 240 110 320 125" fill="none" stroke="#7da9a1" stroke-width="4"/></g>
+    <g transform="translate(812 370)"><rect width="340" height="210" rx="8" fill="#202d38"/><text x="18" y="27" stroke="none">Memory</text><path d="M18 170H320M18 40V170" fill="none"/><path d="M20 145 L100 140 175 136 245 105 320 105" fill="none" stroke="#c8a66a" stroke-width="4"/></g>
+  </g>
+</svg>
