@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="title desc">
+  <title id="title">A practical parameter-group policy</title>
+  <desc id="desc">A parameter classification diagram shows matrix-like weights in a decay group and one-dimensional normalization scales and biases in a no-decay group, with embeddings marked as a recipe-dependent decision.</desc>
+  <rect width="960" height="470" fill="#17212b"/>
+  <g font-family="sans-serif">
+    <text x="52" y="48" fill="#e7edf0" font-size="25" font-weight="700">Decide by parameter role, not just by name</text>
+    <text x="52" y="76" fill="#9eabb5" font-size="16">The ndim ≥ 2 heuristic is a useful starting point, not a universal law.</text>
+    <rect x="52" y="112" width="395" height="292" rx="14" fill="#263541" stroke="#80b8b0" stroke-width="2"/>
+    <text x="82" y="150" fill="#80b8b0" font-size="21" font-weight="700">Usually decay</text>
+    <g fill="#e7edf0" font-size="17">
+      <text x="84" y="194">attention projection matrices</text>
+      <text x="84" y="230">MLP gate / up / down matrices</text>
+      <text x="84" y="266">expert matrices</text>
+      <text x="84" y="302">often: output head matrix</text>
+    </g>
+    <g fill="#9eabb5" font-size="14"><text x="84" y="350">These are matrix-like parameters whose</text><text x="84" y="372">magnitude can act as a useful complexity signal.</text></g>
+    <rect x="513" y="112" width="395" height="292" rx="14" fill="#263541" stroke="#bd7562" stroke-width="2"/>
+    <text x="543" y="150" fill="#bd7562" font-size="21" font-weight="700">Usually no decay</text>
+    <g fill="#e7edf0" font-size="17">
+      <text x="545" y="194">bias vectors</text>
+      <text x="545" y="230">RMSNorm / LayerNorm scales</text>
+      <text x="545" y="266">router or special parameters:</text>
+      <text x="563" y="292">inspect the training recipe</text>
+    </g>
+    <g fill="#9eabb5" font-size="14"><text x="545" y="350">Embeddings are architecture-dependent:</text><text x="545" y="372">choose explicitly, especially when weights are tied.</text></g>
+    <rect x="52" y="426" width="856" height="1" fill="#536371"/>
+    <text x="480" y="455" text-anchor="middle" fill="#d4a75c" font-size="16">Every trainable parameter should land in exactly one optimizer group.</text>
+  </g>
+</svg>
